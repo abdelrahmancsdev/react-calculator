@@ -115,6 +115,6 @@ main #app #buttons button svg {
 main #app #buttons #clear,
 main #app #buttons #equals {
   grid-column: span 2;
-  background-color: #3f51b5;
+  background-color: #673ab7;
   color: #fff;
 }/*# sourceMappingURL=App.css.map */
