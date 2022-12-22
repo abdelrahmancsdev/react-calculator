@@ -1,0 +1,98 @@
+// Variables
+$main-color: #0075ff;
+$hover-color: #0150ad;
+
+// Mixins
+@mixin flex($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin grid($align, $justify) {
+  display: grid;
+  align-items: $align;
+  justify-items: $justify;
+}
+
+// Global
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+// Main Style
+main {
+  @include flex(center, center);
+  min-height: 100vh;
+  background-color: #3a1e6b;
+  color: #fff;
+  padding: 20px;
+  #app {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    #app-name {
+      font-family: "Merienda One", cursive;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #operation {
+      @include flex(flex-end, center);
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #241146;
+      border-radius: 15px;
+      #inputs,
+      #display {
+        @include flex(center, flex-end);
+        word-break: break-all;
+        min-height: 30px;
+        width: 100%;
+        line-height: 1.5;
+        letter-spacing: 1px;
+      }
+      #display {
+        font-size: 24px;
+      }
+    }
+    #buttons {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 10px;
+      background-color: #241146;
+      padding: 20px;
+      border-radius: 15px;
+      button {
+        user-select: none;
+        font-size: 20px;
+        @include flex(center, center);
+        height: 60px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.9;
+        }
+        &:active {
+          opacity: 0.8;
+        }
+        svg {
+          width: 20px;
+        }
+      }
+      #clear,
+      #equals {
+        grid-column: span 2;
+        background-color: #3f51b5;
+        color: #fff;
+      }
+    }
+  }
+}

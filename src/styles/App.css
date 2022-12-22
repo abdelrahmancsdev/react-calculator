@@ -1,0 +1,120 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #3a1e6b;
+  color: #fff;
+  padding: 20px;
+}
+main #app {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+main #app #app-name {
+  font-family: "Merienda One", cursive;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main #app #operation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #241146;
+  border-radius: 15px;
+}
+main #app #operation #inputs,
+main #app #operation #display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  word-break: break-all;
+  min-height: 30px;
+  width: 100%;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+main #app #operation #display {
+  font-size: 24px;
+}
+main #app #buttons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  background-color: #241146;
+  padding: 20px;
+  border-radius: 15px;
+}
+main #app #buttons button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main #app #buttons button:hover {
+  opacity: 0.9;
+}
+main #app #buttons button:active {
+  opacity: 0.8;
+}
+main #app #buttons button svg {
+  width: 20px;
+}
+main #app #buttons #clear,
+main #app #buttons #equals {
+  grid-column: span 2;
+  background-color: #3f51b5;
+  color: #fff;
+}/*# sourceMappingURL=App.css.map */
